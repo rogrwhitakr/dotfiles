@@ -17,10 +17,11 @@ mv xy to z
 
 ```bash
 
-curl <some script that is part of the repo>
-chmod u+x <script>
+curl https://raw.githubusercontent.com/rogrwhitakr/dotfiles/master/setup-profile-on-new-box.bash
+
+chmod u+x ./setup-profile-on-new-box.bash
 
 # i can trust it to do little harm
-./<script>
+./setup-profile-on-new-box.bash
 
 ```
