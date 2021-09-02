@@ -17,7 +17,7 @@ mv xy to z
 
 ```bash
 
-curl https://raw.githubusercontent.com/rogrwhitakr/dotfiles/master/setup-profile-on-new-box.bash
+curl https://raw.githubusercontent.com/rogrwhitakr/dotfiles/main/setup-profile-on-new-box.bash -o setup-profile-on-new-box.bash
 
 chmod u+x ./setup-profile-on-new-box.bash
 
