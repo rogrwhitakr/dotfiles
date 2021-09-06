@@ -1,5 +1,4 @@
-
-[ "$PS1" != "" ] || return 0
+###################################### Powerline ######################################
 
 if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q
