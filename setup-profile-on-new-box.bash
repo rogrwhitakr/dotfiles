@@ -4,32 +4,25 @@
 # BASH PROFILE SETUP
 #   HISTORY:
 #
-#   2018-06-23 - v0.0.1  -  First Creation
-#   2018-06-23 - v0.1.1  -  add one-shot service for pulling files
+#   2018-06-23 - First Creationv
+#   2018-06-23 - add one-shot service for pulling files
+#   2021-09-03 - add local updater
 #
 # ######################################################################################
 
 # global vars
-readonly version="0.7.0"
+readonly version="0.9.0"
 
 function usage {
 	cat <<EOF
 ${0} [OPTION]... [FILE]...
 
 this script sets up sourcing of:
-	.bash_profile
-	.bashrc
 	.bashrc.d/*.bash
 
-it creates a subdirectory "$HOME"/.bashrc.d/, which is in turn populated with distinct files containing:
-	alias.bash => holding aliases
-	functions.bash => folding function definitions
-	application specifics => (TBD)
-
-these are then referenced in the bashrc file.
-
-templates are sourced from github.com:	
-	github.com/rogrwhitakr/northern-lights/conf/dotfiles/.bashrc.d
+	it creates a subdirectory "$HOME"/.bashrc.d/, which is in turn populated with distinct files
+	these are then referenced in the bashrc file.
+	templates are sourced from github.com
 
 PREREQUISITES / REQUIREMENTS:
 	network connectivity
@@ -165,7 +158,7 @@ function main {
 	readonly url="https://raw.githubusercontent.com/rogrwhitakr/dotfiles/main/.bashrc.d"
 
 	declare -a sources=('.bashrc' '.bash_profile')
-	declare -a files=('alias.bash' 'function.bash' 'export.bash' 'program.bash')
+	declare -a files=('alias.bash' 'function.bash' 'export.bash' 'program.bash' 'git.bash' 'powerline.bash' 'alias-flatpak.bash')
 
 	trap script_finish EXIT INT TERM
 
