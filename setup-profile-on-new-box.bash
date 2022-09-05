@@ -140,6 +140,16 @@ function add_to_file {
 	local directory="${3}"
 
 	echo -e "
+if [[ $__bashrc_bench ]]; then
+TIMEFORMAT="${file}: %R"
+	time . "${file}"
+	unset TIMEFORMAT
+else
+	. "${file}"
+fi
+done; 
+unset i
+
 # BEGIN SOURCE ${file^^} DEFINITION
 if [[ -f ~/${directory}/${file} ]]; then
 	. ~/${directory}/${file}
