@@ -1,1 +1,0 @@
-ja keen plan, dont werk?
